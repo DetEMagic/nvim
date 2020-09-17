@@ -1,21 +1,4 @@
-"~/.config/nvim/init.vim för Linux Terminal"
-"TODO  och plugins
-"Att göra innan användning"
-
-"1. Ändra CapsLock till Esc: gå till menu->keyboard->keyboard layouts->
-"   CapsLock behavior->swap Esc and CapsLock"
-
-"2. För kopiera och klistra in: sudo apt-get install xclip"
-
-"3. För coc.nvim behövs nodejs >= 10.12 och vim >= 8.0.1453"
-"   Ladda ner nodejs:"
-"   sudo apt-get install curl python-software-properties"
-"   curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -"
-"   sudo apt-get install nodejs"
-
-"4. Ladda om init.vim och :PlugInstall för att ladda ner plugins"
-"
-"5. Kör :checkhealth inuti nvim
+"Neovim init.vim file for debian/ubuntu/linux mint terminal"
 
 set number "Rad nummer"
 set noshowmode "Fix för lightline"
