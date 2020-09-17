@@ -27,8 +27,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
 sudo apt-get install nodejs
 
 ```
-## Configuring init.vim
-Open a terminal
+## Configure init.vim
 
 ```
 cd
@@ -40,9 +39,8 @@ After you have cloned the repository:
 ```
 cd nvim
 nvim init.vim
-
 ```
-run :checkhealth inside neovim to see if everything works as intended
+Run :checkhealth inside neovim to see if everything works as intended.
 
 ## One more thing...
 Change CapsLock to Esc: menu->keyboard->keyboard layouts->CapsLock behavior->swap Esc and CapsLock
