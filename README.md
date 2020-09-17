@@ -1,6 +1,6 @@
 # Neovim for debian/ubuntu/linux mint
 
-##Install neovim 
+## Install neovim 
 ```
 cd
 sudo add-apt-repository ppa:neovim-ppa/stable
@@ -9,25 +9,25 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
 ```
-##Install necessary packages for plugins in init.vim
-######Python
+## Install necessary packages for plugins in init.vim
+###### Python
 ```
 sudo apt-get install python-neovim
 sudo apt-get install python3-neovim
 ```
 
-######System clipboard
+###### System clipboard
 ```
 sudo apt-get install xclip
 ```
-######Nodejs
+###### Nodejs
 ```
 sudo apt-get install curl python-software-properties
 curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
 sudo apt-get install nodejs
 
 ```
-##Configuring init.vim
+## Configuring init.vim
 Open a terminal
 
 ```
@@ -44,8 +44,7 @@ nvim init.vim
 ```
 run :checkhealth inside neovim to see if everything works as intended
 
-##Good changes outside init.vim
-
+## One more thing...
 Change CapsLock to Esc: menu->keyboard->keyboard layouts->CapsLock behavior->swap Esc and CapsLock
 
 
