@@ -4,8 +4,7 @@
 ```
 cd
 sudo add-apt-repository ppa:neovim-ppa/stable
-(for unstable neovim: sudo add-apt-repository ppa:neovim-ppa/stable)
- 
+(for unstable neovim: sudo add-apt-repository ppa:neovim-ppa/unstable) 
 sudo apt-get update
 sudo apt-get install neovim
 ```
