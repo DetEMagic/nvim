@@ -96,3 +96,5 @@ let g:lightline = {
 syntax on
 "Atom One Dark UI"
 colorscheme onedark
+"remap to esc to exit terminal mode"
+:tnoremap <Esc> <C-\><C-n>
