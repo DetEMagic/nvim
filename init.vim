@@ -10,8 +10,8 @@ set ttimeoutlen=50 "no label-delay when you go from INSERT to NORMAL"
 set noshowcmd "No navigation flashing under status bar"
 
 "indent is set to 4 instead of default 8"
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 "download automatically coc extensions"
@@ -97,4 +97,6 @@ syntax on
 "Atom One Dark UI"
 colorscheme onedark
 "remap to esc to exit terminal mode"
-:tnoremap <Esc> <C-\><C-n>
+:tnoremap <Esc> <C-\><C-n> 
+"remove line numbers inside terminal mode"
+autocmd TermOpen * setlocal nonumber norelativenumber
