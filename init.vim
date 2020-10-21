@@ -21,7 +21,8 @@ let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-html',
 \ 'coc-css',
-\ 'coc-tsserver'
+\ 'coc-tsserver',
+\ 'coc-java'
 \ ]
 
 "create the directories automatically if they do not exist"
@@ -62,6 +63,8 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Better clangd syntax highlighting"
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Better java syntax highlighting"
+Plug 'uiiaoo/java-syntax.vim'
 
 call plug#end()
 
