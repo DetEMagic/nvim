@@ -10,8 +10,8 @@ set ttimeoutlen=50 "no label-delay when you go from INSERT to NORMAL"
 set noshowcmd "No navigation flashing under status bar"
 
 "indent is set to 4 instead of default 8"
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 "download automatically coc extensions"
@@ -81,22 +81,28 @@ if (empty($TMUX))
   endif
   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 > if (has("termguicolors")) set termguicolors
   endif
+endif
+
+"java improved syntax highlighting"
+if (has("autocmd")) 
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#abb2bf", "cterm": "145", "cterm16" : "7" } 
+    autocmd ColorScheme * call onedark#set_highlight("javaIdentifier", { "fg": s:white }) 
+  augroup END
 endif
 
 "hide end-of-buffer filler lines (~)"
 let g:onedark_hide_endofbuffer = 1
-
+"italics"
+let g:onedark_terminal_italics = 1
 "lightline onedark theme"
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
 
-"syntax highlighting in languages"
-syntax on
 "Atom One Dark UI"
 colorscheme onedark
 "remap to esc to exit terminal mode"
