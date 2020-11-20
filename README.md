@@ -1,5 +1,15 @@
 # Neovim for debian/ubuntu/linux mint
 
+## Oneliner to install everything
+```
+cd; sudo add-apt-repository ppa:neovim-ppa/stable; sudo apt-get update; 
+sudo apt-get install neovim python-neovim python3-neovim xclip python-software-properties; 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -;
+sudo apt-get install nodejs; cd; cd ~/.config;
+git clone https://github.com/DetEMagic/nvim/blob/master/init.vim.git; cd nvim;
+nvim init.vim
+```
+
 ## Install neovim 
 ```
 cd
