@@ -2,5 +2,7 @@
     "suggest.noselect": false,
     "html.autoClosingTags": true,
     "clangd.path": "/home/anton/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
-    "clangd.semanticHighlighting": true
+    "clangd.semanticHighlighting": true,
+    "java.home":"/usr/lib/jvm/java-11-openjdk-amd64",
+    "diagnostic.enable": true 
 }

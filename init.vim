@@ -14,9 +14,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+"autocmd FileType c setlocal shiftwidth=2 tabstop=2
+
 "download automatically coc extensions"
 let g:coc_global_extensions = [
 \ 'coc-snippets',
+\ 'coc-emmet',
 \ 'coc-json',
 \ 'coc-clangd',
 \ 'coc-html',
@@ -91,8 +94,10 @@ endif
 if (has("autocmd")) 
   augroup colorset
     autocmd!
+    "java"
     let s:white = { "gui": "#abb2bf", "cterm": "145", "cterm16" : "7" } 
     autocmd ColorScheme * call onedark#set_highlight("javaIdentifier", { "fg": s:white }) 
+    "html"
   augroup END
 endif
 
@@ -111,3 +116,17 @@ colorscheme onedark
 :tnoremap <Esc> <C-\><C-n> 
 "remove line numbers inside terminal mode"
 autocmd TermOpen * setlocal nonumber norelativenumber
+
+"auto close {
+function! s:CloseBracket()
+    let line = getline('.')
+    if line =~# '^\s*\(struct\|class\|enum\) '
+        return "{\<Enter>};\<Esc>O"
+    elseif searchpair('(', '', ')', 'bmn', '', line('.'))
+        " Probably inside a function call. Close it off.
+        return "{\<Enter>});\<Esc>O"
+    else
+        return "{\<Enter>}\<Esc>O"
+    endif
+endfunction
+inoremap <expr> {<Enter> <SID>CloseBracket()
