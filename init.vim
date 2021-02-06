@@ -130,3 +130,6 @@ function! s:CloseBracket()
     endif
 endfunction
 inoremap <expr> {<Enter> <SID>CloseBracket()
+
+"disable sync for large files for performance"
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syn sync clear | endif
